@@ -1,0 +1,109 @@
+<h3>Create User</h3>  
+<div class="row">  
+  <div class="col-sm-4"></div>  
+  <div class="col-sm-4" >  
+    <div [hidden]="submitted" style="width: 400px;">  
+      <form [formGroup]="usersaveform" #saveUser (ngSubmit)="saveUser(saveUser)">  
+          <div class="form-group">  
+              <label for="name"> Name</label>  
+              <input type="text" class="form-control"  formControlName="name" data-toggle="tooltip"   
+                 data-placement="right" title="Enter User Name" >  
+              <div class="alert alert-danger" *ngIf = "(Name.touched) && (Name.invalid)"   
+                style="margin-top: 5px;">  
+                  <span *ngIf="Name.errors.required">User Name is Required</span>  
+                    <span *ngIf = "Name.errors.minlength">   
+                        MinLength Error   
+                    </span>                     
+                </div>   
+          </div>  
+    
+          <div class="form-group">  
+              <label for="name"> Email</label>  
+              <input type="text" class="form-control" formControlName="email"   
+                data-toggle="tooltip" data-placement="right" title="Enter User Email">  
+                <div class="alert alert-danger" *ngIf = "(Email.touched) && (Email.invalid)"   
+                style="margin-top: 5px;">  
+                  <span *ngIf="Email.errors.required">User Email is Required</span>  
+                    <span *ngIf = "Email.errors.email">   
+                        Invalid Email Format   
+                      </span>                     
+                </div>  
+          </div>  
+          
+         
+          <div class="form-group">  
+            <label for="name"> MobileNo</label>  
+            <input type="text" class="form-control" formControlName="mobileNo"   
+              data-toggle="tooltip" data-placement="right" title="Enter User MobileNo">  
+              <div class="alert alert-danger" *ngIf = "(MobileNo.touched) && (MobileNo.invalid)"   
+              style="margin-top: 5px;">  
+                <span *ngIf="MobileNo.errors.required">User Email is Required</span>  
+                  <span *ngIf = "MobileNo.errors.mobileNo">   
+                      Invalid MobileNo Format   
+                    </span>                     
+              </div>  
+        </div> 
+        <div class="form-group">  
+          <label for="name"> Designation</label>  
+          <input type="text" class="form-control" formControlName="designation"   
+            data-toggle="tooltip" data-placement="right" title="Enter User Designation">  
+            <div class="alert alert-danger" *ngIf = "(Designation.touched) && (Designation.invalid)"   
+            style="margin-top: 5px;">  
+              <span *ngIf="Designation.errors.required">User Email is Required</span>  
+                <span *ngIf = "Designation.errors.designation">   
+                    Invalid Designation Format   
+                  </span>                     
+            </div>  
+      </div>   
+      <div class="form-group">  
+        <label for="name"> Salary</label>  
+        <input type="text" class="form-control" formControlName="Salary"   
+          data-toggle="tooltip" data-placement="right" title="Enter User Salary">  
+          <div class="alert alert-danger" *ngIf = "(Salary.touched) && (Salary.invalid)"   
+          style="margin-top: 5px;">  
+            <span *ngIf="Salary.errors.required">User Salary is Required</span>  
+              <span *ngIf = "Salary.errors.S\salary">   
+                
+                </span>                     
+          </div>  
+    </div>  
+    <div class="form-group">  
+      <label for="name"> DOB</label>  
+      <input type="text" class="form-control" formControlName="email"   
+        data-toggle="tooltip" data-placement="right" title="Enter User DOB">  
+        <div class="alert alert-danger" *ngIf = "(DOB.touched) && (DOB.invalid)"   
+        style="margin-top: 5px;">  
+          <span *ngIf="DOB.errors.required">User DOB is Required</span>  
+            <span *ngIf = "DOB.errors.dob">   
+                Invalid DOB Format   
+              </span>                     
+        </div>  
+  </div>  
+  <div class="form-group">  
+    <label for="name"> JoiningDate</label>  
+    <input type="text" class="form-control" formControlName="joiningDate"   
+      data-toggle="tooltip" data-placement="right" title="Enter User JoiningDate">  
+      <div class="alert alert-danger" *ngIf = "(JoiningDate.touched) && (JoiningDate.invalid)"   
+      style="margin-top: 5px;">  
+        <span *ngIf="JoiningDate.errors.required">User JoiningDate is Required</span>  
+          <span *ngIf = "JoiningDate.errors.joiningDate">   
+              Invalid JoiningDate Format   
+            </span>                     
+      </div>  
+</div>  
+          <button type="submit" class="btn btn-success">Submit</button>  
+      </form>  
+  </div>  
+  </div>  
+  <div class="col-sm-4"></div>  
+</div>  
+<div class="row">  
+  <div class="col-sm-4"></div>  
+  <div class="col-sm-4">  
+      <div [hidden]="!submitted">  
+         <h4>User Added SuccessFully!</h4>  
+         <button (click)="addStudentForm()" class='btn btn-primary'>Add More User</button>  
+      </div>        
+  </div>  
+  <div class="col-sm-4"></div>  
+</div>  
